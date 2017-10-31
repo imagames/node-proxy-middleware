@@ -80,9 +80,10 @@ function applyViaHeader(existingHeaders, opts, applyTo) {
 }
 
 function slashJoin(p1, p2) {
-  if (p1.length && p1[p1.length - 1] === '/') {p1 = p1.substring(0, p1.length - 1); }
-  if (p2.length && p2[0] === '/') {p2 = p2.substring(1); }
-  return p1 + '/' + p2;
+   if (p1.length && p1[p1.length - 1] === '/') {p1 = p1.substring(0, p1.length - 1); } 
+   if (p2 ==='/') return p1;                                                           
+   if (p2.length && p2[0] === '/') {p2 = p2.substring(1); }                            
+   return p1 + '/' + p2;
 }
 
 function extend(obj, src) {
